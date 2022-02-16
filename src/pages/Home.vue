@@ -3,7 +3,7 @@
   <p>{{ description }}</p>
   <div>
     <div class="form_container">
-      <form @submit="login">
+      <form @submit.prevent="login">
         <div>
           <input placeholder="Usuário" v-model="user" />
           <input placeholder="Senha" type="password" v-model="password" />
@@ -20,9 +20,8 @@
 export default {
   data() {
     return {
-      name: "",
-      lastName: "",
-      Email: "",
+      user:"",
+      password:"",
       titleBook: "Bem-vindos a sua estante virtual",
       description:
         "Aqui você poderá cadastrar os livros que já leu, aquele livro que está na fila para ser lidos e também vai contar com recomendações de livros de acordo com seu gosto literário.",
@@ -30,7 +29,11 @@ export default {
   },
   methods: {
     login() {
-      console.log(this.Email);
+      const body = { 
+        user: this.user,
+        password: this.password
+      }
+      console.log(body);
     },
   },
 };
