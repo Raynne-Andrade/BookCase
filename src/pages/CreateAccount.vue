@@ -63,4 +63,9 @@ div span a {
   font-family: sans-serif;
   font-size: 17px;
 }
+h1{ 
+  color: rgb(255, 0, 64);
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
 </style>

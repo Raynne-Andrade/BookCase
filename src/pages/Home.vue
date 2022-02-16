@@ -59,7 +59,7 @@ form button {
 }
 .form_container {
   max-width: 450px;
-  margin: 100px auto;
+  margin: 80px auto;
 }
 .form_container span a {
   text-decoration: none;
@@ -79,5 +79,8 @@ h2{
 p{ 
   color: #757575;
   font-family: sans-serif;
+  max-width: 700px;
+  margin: auto;
+  line-height: 25px;
 }
 </style>
