@@ -6,6 +6,7 @@
       <input placeholder="Nome" v-model="name" />
       <input placeholder="Apelido" v-model="nickname" />
       <input placeholder="E-mail" v-model="email" />
+      <input placeholder="Senha" v-model="password" />
       <button type="submit">Cadastrar</button>
     </form>
     <span> <a href="/"> Já tenho uma conta </a> </span>
@@ -13,12 +14,14 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
       name: "",
       nickname: "",
       email: "",
+      password: "",
     };
   },
   methods: {
@@ -27,10 +30,19 @@ export default {
         name: this.name,
         nickname: this.nickname,
         email: this.email,
+        password: this.password,
       };
-      console.log(body);
+      axios
+        .post("http://localhost:3000/user/", body )
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
+
 };
 </script>
 
@@ -63,7 +75,7 @@ div span a {
   font-family: sans-serif;
   font-size: 17px;
 }
-h1{ 
+h1 {
   color: rgb(255, 0, 64);
   font-family: sans-serif;
   text-transform: uppercase;

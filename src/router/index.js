@@ -15,7 +15,7 @@ const routes = [
     component: Create,
   },
   {
-    path: "/profile",
+    path: "/profile/:user",
     name: "Perfil",
     component: BookCase,
   },

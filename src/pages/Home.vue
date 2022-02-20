@@ -1,27 +1,31 @@
-<template>
-  <h2>{{ titleBook }}</h2>
-  <p>{{ description }}</p>
-  <div>
-    <div class="form_container">
-      <form @submit.prevent="login">
-        <div>
-          <input placeholder="Usuário" v-model="user" />
-          <input placeholder="Senha" type="password" v-model="password" />
-        </div>
-        <div>
-          <button type="submit">Entrar</button>
-        </div>
-      </form>
-      <span> <a href="/create"> Não tenho uma conta </a> </span>
+<template >
+  <div v-bind:style="{ 'background-image': 'url(.../assets/images.png)' }">
+    <h2>{{ titleBook }}</h2>
+    <p>{{ description }}</p>
+    <div>
+      <div class="form_container">
+        <form @submit.prevent="login">
+          <div>
+            <input placeholder="Usuário" v-model="user" />
+            <input placeholder="Senha" type="password" v-model="password" />
+          </div>
+          <div>
+            <button type="submit">Entrar</button>
+          </div>
+        </form>
+        <span> <a href="/create"> Não tenho uma conta </a> </span>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
-      user:"",
-      password:"",
+      image: "{backgroundImage: url(.../assets/images.png) }",
+      user: "",
+      password: "",
       titleBook: "Bem-vindos a sua estante virtual",
       description:
         "Aqui você poderá cadastrar os livros que já leu, aquele livro que está na fila para ser lidos e também vai contar com recomendações de livros de acordo com seu gosto literário.",
@@ -29,11 +33,17 @@ export default {
   },
   methods: {
     login() {
-      const body = { 
-        user: this.user,
-        password: this.password
-      }
-      console.log(body);
+      axios.get(`http://localhost:3000/user?user=${this.user}&password=${this.password}`)
+      .then((res) => { 
+        console.log(res)
+        if(res.data.length == 0){ 
+          console.log('usuario nao existe')
+        }
+        else { 
+         window.location.assign(`/profile/${this.user}`)
+}
+      })
+      .catch((err) => { console.log(err)})
     },
   },
 };
@@ -67,16 +77,15 @@ form button {
   font-family: sans-serif;
   font-size: 17px;
 }
-.template { 
+.template {
   max-width: 1000px;
-  background-image: image(url(https://i.pinimg.com/736x/54/dd/1c/54dd1c82d9d34b9c71dc2410a151a8fa.jpg));
 }
-h2{ 
+h2 {
   color: rgb(255, 0, 64);
   font-family: sans-serif;
   text-transform: uppercase;
 }
-p{ 
+p {
   color: #757575;
   font-family: sans-serif;
   max-width: 700px;

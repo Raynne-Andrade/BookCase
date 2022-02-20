@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this.url_current == '/profile'">
+  <div v-if="this.url_current.includes('profile')">
     <Header />
   </div>
   <router-view />
