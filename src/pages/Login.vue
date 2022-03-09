@@ -13,6 +13,9 @@
             <div>
               <button type="submit">Entrar</button>
             </div>
+            <div style="margin-bottom: 15px; color: red" v-if="error">
+              Usuario não encontrado. Confira o seu usuario e senha!
+            </div>
           </form>
           <span> <a href="/create"> Não tenho uma conta </a> </span>
         </div>
@@ -25,6 +28,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      error: false,
       image: "{backgroundImage: url(.../assets/images.png) }",
       user: "",
       password: "",
@@ -35,6 +39,7 @@ export default {
   },
   methods: {
     login() {
+      this.error = false
       axios
         .get(
           `http://localhost:3000/user?user=${this.user}&password=${this.password}`
@@ -42,7 +47,7 @@ export default {
         .then((res) => {
           console.log(res);
           if (res.data.length == 0) {
-            console.log("usuario nao existe");
+            this.error = true;
           } else {
             window.location.assign(`/home/${this.user}`);
           }
@@ -56,7 +61,7 @@ export default {
 </script>
 <style scoped>
 .a {
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;

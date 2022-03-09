@@ -1,7 +1,5 @@
 <template>
-  <div v-if="this.url_current.includes('home')">
-    <Header />
-  </div>
+  <Header />
   <router-view />
 </template>
 

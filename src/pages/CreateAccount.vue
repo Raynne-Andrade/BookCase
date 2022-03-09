@@ -58,7 +58,7 @@ export default {
 
 <style scoped>
 .a {
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@ form button {
 }
 div {
   max-width: 450px;
-  margin:auto;
+  margin: auto;
 }
 div span a {
   text-decoration: none;
