@@ -101,4 +101,13 @@ span {
   font-size: 14px;
   line-height: 30px;
 }
+@media (max-width: 600px) {
+  .a {
+    max-width: 320px;
+    margin: auto;
+  }
+  form input {
+    width: 320px;
+  }
+}
 </style>

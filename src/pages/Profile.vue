@@ -87,4 +87,14 @@ export default {
   display: flex;
   justify-content: left;
 }
+@media (max-width: 600px) {
+  .Form__profile--input {
+    max-width: 320px;
+    width: 300px;
+  }
+  .Form__profile {
+    max-width: 320px;
+    margin: auto;
+  }
+}
 </style>

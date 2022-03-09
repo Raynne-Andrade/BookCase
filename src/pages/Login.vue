@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     login() {
-      this.error = false
+      this.error = false;
       axios
         .get(
           `http://localhost:3000/user?user=${this.user}&password=${this.password}`
@@ -108,5 +108,14 @@ p {
   max-width: 700px;
   margin: auto;
   line-height: 25px;
+}
+@media (max-width: 600px) {
+  .a {
+    max-width: 320px;
+    margin: auto
+  }
+  form input {
+  width: 320px;
+}
 }
 </style>

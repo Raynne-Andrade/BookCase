@@ -2,7 +2,7 @@
   <div style="width: 100%">
     <nav v-if="!isMobile" class="header">
       <ul>
-        <li><a href="/home"> Inicio </a></li>
+        <li><a href="/home/Ray"> Inicio </a></li>
         <li><a href="/register-book"> Cadastrar livro </a></li>
         <li><a href="/no-router"> Livros Lidos </a></li>
         <li><a href="/no-router"> Quero Ler </a></li>
@@ -24,7 +24,7 @@
           style="position: fixed; right: 0; padding: 10px"
         />
         <ul>
-          <li><a href="/home"> Inicio </a></li>
+          <li><a href="/home/Ray"> Inicio </a></li>
           <li><a href="/register-book"> Cadastrar livro </a></li>
           <li><a href="/no-router"> Livros Lidos </a></li>
           <li><a href="/no-router"> Quero Ler </a></li>
