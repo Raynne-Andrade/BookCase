@@ -1,25 +1,27 @@
 <template >
-  <div v-bind:style="{ 'background-image': 'url(.../assets/images.png)' }">
-    <h2>{{ titleBook }}</h2>
-    <p>{{ description }}</p>
-    <div>
-      <div class="form_container">
-        <form @submit.prevent="login">
-          <div>
-            <input placeholder="Usuário" v-model="user" enterkeyhint="next"/>
-            <input placeholder="Senha" type="password" v-model="password" />
-          </div>
-          <div>
-            <button type="submit">Entrar</button>
-          </div>
-        </form>
-        <span> <a href="/create"> Não tenho uma conta </a> </span>
+  <div class="a">
+    <diV>
+      <h2>{{ titleBook }}</h2>
+      <p>{{ description }}</p>
+      <div>
+        <div class="form_container">
+          <form @submit.prevent="login">
+            <div>
+              <input placeholder="Usuário" v-model="user" enterkeyhint="next" />
+              <input placeholder="Senha" type="password" v-model="password" />
+            </div>
+            <div>
+              <button type="submit">Entrar</button>
+            </div>
+          </form>
+          <span> <a href="/create"> Não tenho uma conta </a> </span>
+        </div>
       </div>
-    </div>
+    </diV>
   </div>
 </template>
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
   data() {
     return {
@@ -33,22 +35,32 @@ export default {
   },
   methods: {
     login() {
-      axios.get(`http://localhost:3000/user?user=${this.user}&password=${this.password}`)
-      .then((res) => { 
-        console.log(res)
-        if(res.data.length == 0){ 
-          console.log('usuario nao existe')
-        }
-        else { 
-         window.location.assign(`/home/${this.user}`)
-}
-      })
-      .catch((err) => { console.log(err)})
+      axios
+        .get(
+          `http://localhost:3000/user?user=${this.user}&password=${this.password}`
+        )
+        .then((res) => {
+          console.log(res);
+          if (res.data.length == 0) {
+            console.log("usuario nao existe");
+          } else {
+            window.location.assign(`/home/${this.user}`);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
 };
 </script>
 <style scoped>
+.a {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 form input {
   margin: 5px 0px;
   border-radius: 5px;

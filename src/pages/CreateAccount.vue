@@ -1,19 +1,22 @@
 <template>
-  <h1>Criar conta</h1>
-  <p></p>
-  <div>
-    <form @submit.prevent="CreateAccount">
-      <input placeholder="Nome" v-model="name" />
-      <input placeholder="Apelido" v-model="nickname" />
-      <input placeholder="E-mail" v-model="email" />
-      <input placeholder="Senha" v-model="password" />
-      <button type="submit">Cadastrar</button>
-    </form>
-    <span v-if="error">
-      Não foi possivel efetuar o cadastro, tente novamente mais tarde!
-    </span>
-    <br />
-    <span> <a href="/"> Já tenho uma conta </a> </span>
+  <div class="a">
+    <div>
+      <h1>Criar conta</h1>
+      <div>
+        <form @submit.prevent="CreateAccount">
+          <input placeholder="Nome" v-model="name" />
+          <input placeholder="Apelido" v-model="nickname" />
+          <input placeholder="E-mail" v-model="email" />
+          <input placeholder="Senha" v-model="password" />
+          <button type="submit">Cadastrar</button>
+        </form>
+        <span v-if="error">
+          Não foi possivel efetuar o cadastro, tente novamente mais tarde!
+        </span>
+        <br />
+        <span> <a href="/"> Já tenho uma conta </a> </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,8 +41,8 @@ export default {
         email: this.email,
         password: this.password,
       };
-      this.$store.dispatch('updateUser', body)
-      
+      this.$store.dispatch("updateUser", body);
+
       axios
         .post("http://localhost:3000/user/", body)
         .then(() => {
@@ -54,6 +57,12 @@ export default {
 </script>
 
 <style scoped>
+.a {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 form input {
   margin: 5px 0px;
   border-radius: 5px;
@@ -74,7 +83,7 @@ form button {
 }
 div {
   max-width: 450px;
-  margin: 100px auto;
+  margin:auto;
 }
 div span a {
   text-decoration: none;
