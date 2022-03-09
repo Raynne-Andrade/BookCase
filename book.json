@@ -14,31 +14,11 @@
   ],
   "user": [
     {
-      "name": "ray",
-      "user": "tay",
-      "email": "tarre",
-      "password": "ray",
-      "id": 2
-    },
-    {
-      "name": "asss",
-      "email": "a",
-      "user": "a",
-      "id": 3
-    },
-    {
-      "name": "a",
-      "user": "a",
-      "email": "a",
-      "password": "a",
-      "id": 4
-    },
-    {
-      "name": "",
-      "user": "",
-      "email": "",
-      "password": "",
-      "id": 5
+      "name": "Raynne",
+      "user": "Ray",
+      "email": "teste@teste.com.br",
+      "password": "teste",
+      "id": 1
     }
   ]
 }

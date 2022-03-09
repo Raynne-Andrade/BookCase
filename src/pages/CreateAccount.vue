@@ -4,10 +4,10 @@
       <h1>Criar conta</h1>
       <div>
         <form @submit.prevent="CreateAccount">
-          <input placeholder="Nome" v-model="name" />
-          <input placeholder="Apelido" v-model="nickname" />
-          <input placeholder="E-mail" v-model="email" />
-          <input placeholder="Senha" v-model="password" />
+          <input placeholder="Nome" v-model="name" required />
+          <input placeholder="Apelido" v-model="nickname" required />
+          <input placeholder="E-mail" v-model="email" required />
+          <input placeholder="Senha" v-model="password" required />
           <button type="submit">Cadastrar</button>
         </form>
         <span v-if="error">
