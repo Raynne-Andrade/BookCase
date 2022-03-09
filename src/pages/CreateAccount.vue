@@ -9,40 +9,47 @@
       <input placeholder="Senha" v-model="password" />
       <button type="submit">Cadastrar</button>
     </form>
+    <span v-if="error">
+      Não foi possivel efetuar o cadastro, tente novamente mais tarde!
+    </span>
+    <br />
     <span> <a href="/"> Já tenho uma conta </a> </span>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
+  components: {},
   data() {
     return {
       name: "",
       nickname: "",
       email: "",
       password: "",
+      error: false,
     };
   },
   methods: {
     CreateAccount() {
       var body = {
         name: this.name,
-        nickname: this.nickname,
+        user: this.nickname,
         email: this.email,
         password: this.password,
       };
+      this.$store.dispatch('updateUser', body)
+      
       axios
-        .post("http://localhost:3000/user/", body )
-        .then((res) => {
-          console.log(res.data);
+        .post("http://localhost:3000/user/", body)
+        .then(() => {
+          window.location.assign(`/home/${body.user}`);
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
+          this.error = true;
         });
     },
   },
-
 };
 </script>
 
@@ -79,5 +86,10 @@ h1 {
   color: rgb(255, 0, 64);
   font-family: sans-serif;
   text-transform: uppercase;
+}
+span {
+  color: red;
+  font-size: 14px;
+  line-height: 30px;
 }
 </style>

@@ -1,13 +1,16 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "../pages/Home.vue";
+import Login from "../pages/Login.vue";
 import Create from "../pages/CreateAccount.vue";
-import BookCase from "../pages/BookCase.vue"
+import BookCase from "../pages/BookCase.vue";
+import RegisterBook from "../pages/RegisterBook.vue";
+import Profile from '../pages/Profile.vue'
+import InfoBook from '../pages/InfoBook.vue'
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Login",
+    component: Login,
   },
   {
     path: "/create",
@@ -15,10 +18,26 @@ const routes = [
     component: Create,
   },
   {
-    path: "/profile/:user",
-    name: "Perfil",
+    path: "/home/:user",
+    name: "Home",
     component: BookCase,
   },
+  {
+    path: "/register-book",
+    name: "Registrar um novo livro",
+    component: RegisterBook,
+  },
+  {
+    path: "/profile",
+    name: "Perfil",
+    component: Profile,
+  }
+  ,
+  {
+    path: "/info/:book/:id",
+    name: "Info",
+    component: InfoBook,
+  }
 ];
 
 const router = createRouter({

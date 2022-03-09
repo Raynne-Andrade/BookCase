@@ -6,7 +6,7 @@
       <div class="form_container">
         <form @submit.prevent="login">
           <div>
-            <input placeholder="Usuário" v-model="user" />
+            <input placeholder="Usuário" v-model="user" enterkeyhint="next"/>
             <input placeholder="Senha" type="password" v-model="password" />
           </div>
           <div>
@@ -40,7 +40,7 @@ export default {
           console.log('usuario nao existe')
         }
         else { 
-         window.location.assign(`/profile/${this.user}`)
+         window.location.assign(`/home/${this.user}`)
 }
       })
       .catch((err) => { console.log(err)})

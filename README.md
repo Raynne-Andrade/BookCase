@@ -5,13 +5,7 @@
 npm install
 ```
 
-
-//Para rodar este projeto é necessio rodar o json-server com o seguinte comando
-
-npm run db
-
-
-### npm run serve para rodar o projeto
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```

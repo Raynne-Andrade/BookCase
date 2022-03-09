@@ -1,96 +1,38 @@
 {
   "books": [
     {
-      "author": "Catherine Ryan Hyde",
-      "editora": "Darkside",
-      "imageLink": "https://images-na.ssl-images-amazon.com/images/I/51C8TeSftdL._SX342_SY445_QL70_ML2_.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 336,
-      "title": "Leve-me com você",
-      "year": 2018,
-      "like": true,
-      "tag": "lidos",
+      "title": "a",
+      "author": "a",
+      "Editora": "a",
+      "language": "a",
+      "pages": "a",
+      "year": "a",
+      "imageLink": "a",
+      "tag": "Parei",
       "id": 1
-    },
-    {
-      "author": "Catherine Ryan Hyde",
-      "editora": "Darkside",
-      "imageLink": "https://images-na.ssl-images-amazon.com/images/I/51C8TeSftdL._SX342_SY445_QL70_ML2_.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 336,
-      "title": "Leve-me com você",
-      "year": 2018,
-      "like": true,
-      "tag": "quero ler",
-      "id": 2
-    },
-    {
-      "author": "Catherine Ryan Hyde",
-      "editora": "Darkside",
-      "imageLink": "https://images-na.ssl-images-amazon.com/images/I/51C8TeSftdL._SX342_SY445_QL70_ML2_.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 336,
-      "title": "Leve-me com você",
-      "year": 2018,
-      "like": false,
-      "tag": "Parei",
-      "id": 3
-    },
-    {
-      "author": "Catherine Ryan Hyde",
-      "editora": "Darkside",
-      "imageLink": "https://images-na.ssl-images-amazon.com/images/I/51C8TeSftdL._SX342_SY445_QL70_ML2_.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 336,
-      "title": "Leve-me com você",
-      "year": 2018,
-      "like": false,
-      "tag": "Parei",
-      "id": 4
-    },
-    {
-      "author": "Catherine Ryan Hyde",
-      "editora": "Darkside",
-      "imageLink": "https://images-na.ssl-images-amazon.com/images/I/51C8TeSftdL._SX342_SY445_QL70_ML2_.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 336,
-      "title": "Leve-me com você",
-      "year": 2018,
-      "like": false,
-      "tag": "Lidos",
-      "id": 5
-    },
-    {
-      "author": "Catherine Ryan Hyde",
-      "editora": "Darkside",
-      "imageLink": "https://images-na.ssl-images-amazon.com/images/I/51C8TeSftdL._SX342_SY445_QL70_ML2_.jpg",
-      "language": "English",
-      "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
-      "pages": 336,
-      "title": "Leve-me com você",
-      "year": 2018,
-      "like": false,
-      "tag": "quero ler",
-      "id": 6
     }
   ],
   "user": [
     {
-      "user": "Raynne",
-      "password": "teste",
-      "id": 1
+      "name": "ray",
+      "user": "tay",
+      "email": "tarre",
+      "password": "ray",
+      "id": 2
     },
     {
-      "name": "s",
-      "user": "s",
-      "email": "s",
-      "password": "s",
-      "id": 2
+      "name": "a",
+      "user": "a",
+      "email": "a",
+      "password": "a",
+      "id": 3
+    },
+    {
+      "name": "a",
+      "user": "a",
+      "email": "a",
+      "password": "a",
+      "id": 4
     }
   ]
 }
