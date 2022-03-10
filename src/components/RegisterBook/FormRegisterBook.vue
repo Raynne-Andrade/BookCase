@@ -4,11 +4,13 @@
       v-model="title"
       placeholder="Nome do livro"
       class="Form__register--input"
+      required
     />
     <input
       v-model="Author"
       placeholder="Nome do/da Autor(a)"
       class="Form__register--input"
+      required
     />
     <input
       v-model="Editora"
@@ -19,25 +21,30 @@
       v-model="language"
       placeholder="Idioma do livro"
       class="Form__register--input"
+      required
     />
     <input
       v-model="pages"
       inputmode="numeric"
+      type="number"
       placeholder="Número de páginas"
       class="Form__register--input"
+      required
     />
     <input
       v-model="year"
+      type="number"
       inputmode="numeric"
       placeholder="Ano de publicação"
       class="Form__register--input"
+      required
     />
     <input
       v-model="imageLink"
       placeholder="Link da imagem do livro"
       class="Form__register--input"
     />
-    <select v-model="tag" class="Form__register--input">
+    <select v-model="tag" class="Form__register--input" required>
       <option value="Lidos">Lidos</option>
       <option value="quero ler">Quero ler</option>
       <option value="Parei">Parei</option>
