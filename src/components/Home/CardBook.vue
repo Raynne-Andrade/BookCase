@@ -47,6 +47,7 @@ export default {
   text-align: center;
   padding-top: 15px;
   margin: inherit;
+  color: rgb(61, 61, 61);
 }
 .card__author {
   font-size: 15px;
@@ -54,6 +55,7 @@ export default {
   font-family: sans-serif;
   text-align: center;
   padding-top: 15px;
+  color: pink;
 }
 .card__tag {
   background: pink;
@@ -65,5 +67,9 @@ export default {
   margin: auto;
   text-transform: uppercase;
   font-size: 13px;
+}
+a {
+  color: write;
+  text-decoration: none;
 }
 </style>

@@ -21,6 +21,17 @@
       "imageLink": "https://marketplace.canva.com/EAD0UPCkitY/1/0/1024w/canva-capa-de-livro-de-suspense-monocrom%C3%A1tica-com-foto-de-floresta-U1dpnJ3bwKw.jpg",
       "tag": "quero ler",
       "id": 2
+    },
+    {
+      "title": "fr",
+      "author": "fr",
+      "Editora": "fr",
+      "language": "fr",
+      "pages": "fr",
+      "year": "fr",
+      "imageLink": "fr",
+      "tag": "Lidos",
+      "id": 3
     }
   ],
   "user": [
@@ -37,6 +48,13 @@
       "email": "asa",
       "password": "s",
       "id": 2
+    },
+    {
+      "name": "teste",
+      "user": "teste",
+      "email": "teste",
+      "password": "teste",
+      "id": 3
     }
   ]
 }
