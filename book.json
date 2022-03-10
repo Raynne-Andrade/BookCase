@@ -1,0 +1,88 @@
+{
+  "books": [
+    {
+      "title": "Livro da Raynne ",
+      "author": "Raynne Andrade",
+      "Editora": "Minha",
+      "language": "Angolano",
+      "pages": "800",
+      "year": "2080",
+      "imageLink": "https://marketplace.canva.com/EAD0UPCkitY/1/0/1024w/canva-capa-de-livro-de-suspense-monocrom%C3%A1tica-com-foto-de-floresta-U1dpnJ3bwKw.jpg",
+      "tag": "quero ler",
+      "id": 1
+    },
+    {
+      "title": "desventuras em series",
+      "author": "aaaaaaa",
+      "Editora": "aaaaaaa",
+      "language": "aaaaaaaa",
+      "pages": 3333333,
+      "year": 3333333333,
+      "imageLink": "https://i.pinimg.com/736x/91/e2/50/91e2500a1e58774eb55f5cfa87064b0d.jpg",
+      "tag": "quero ler",
+      "id": 5
+    }
+  ],
+  "user": [
+    {
+      "name": "Raynne",
+      "user": "Ray",
+      "email": "teste@teste.com.br",
+      "password": "teste",
+      "id": 1
+    },
+    {
+      "name": "as",
+      "user": "as",
+      "email": "asa",
+      "password": "s",
+      "id": 2
+    },
+    {
+      "name": "teste",
+      "user": "teste",
+      "email": "teste",
+      "password": "teste",
+      "id": 3
+    },
+    {
+      "name": "aa",
+      "email": "a@teste",
+      "user": "aa",
+      "id": 4
+    },
+    {
+      "name": "aa",
+      "user": "aa",
+      "email": "a@teste",
+      "password": "hh",
+      "id": 5
+    },
+    {
+      "name": "a",
+      "email": "a@teste.com",
+      "user": "a",
+      "id": 6
+    },
+    {
+      "name": "a",
+      "user": "a",
+      "email": "a@teste.com",
+      "password": "a",
+      "id": 7
+    },
+    {
+      "name": "teste",
+      "user": "teste",
+      "email": "teste@teste.com",
+      "password": "teste",
+      "id": 8
+    },
+    {
+      "name": "teste",
+      "email": "teste@a.com",
+      "user": "aaa",
+      "id": 9
+    }
+  ]
+}
