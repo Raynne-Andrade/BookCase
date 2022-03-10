@@ -10,7 +10,9 @@
       />
     </div>
     <div class="info--content">
-      <div>{{ this.info.title }}</div>
+      <div>
+        <h3>{{ this.info.title }}</h3>
+      </div>
       <div>{{ this.info.author }} - {{ this.info.year }}</div>
       <div><strong> Editora: </strong>{{ this.info.Editora }}</div>
       <div><strong> Idioma: </strong> {{ this.info.language }}</div>
@@ -146,4 +148,13 @@ button {
 /* .modal--sucess__title{ 
   color:chartreuse
 } */
+@media (max-width: 750px) {
+  .info {
+    display: block;
+  }
+  .info--content {
+    text-align: center;
+    margin: 15px 0 0px 0;
+  }
+}
 </style>

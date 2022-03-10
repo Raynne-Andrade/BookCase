@@ -2,7 +2,7 @@
   <div v-if="books.length > 0" class="card">
     <div v-for="book in books" :key="book.title" class="card__container">
       <a :href="'/info/' + book.title + '/' + book.id">
-        <img :src="book.imageLink" width="200" height="250" />
+        <img :src="book.imageLink" class="card--img" />
         <div class="card__tag">
           {{ book.tag }}
         </div>
@@ -67,6 +67,11 @@ export default {
   margin: auto;
   text-transform: uppercase;
   font-size: 13px;
+}
+.card--img{ 
+  max-height: 250px;
+  width: 250px;
+  object-fit: cover;
 }
 a {
   color: write;

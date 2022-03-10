@@ -12,15 +12,15 @@
       "id": 1
     },
     {
-      "title": "Teste",
-      "author": "aaa",
-      "Editora": "yrdyr",
-      "language": "asasa",
-      "pages": "aaa",
-      "year": "aaaa",
-      "imageLink": "https://marketplace.canva.com/EAD0UPCkitY/1/0/1024w/canva-capa-de-livro-de-suspense-monocrom%C3%A1tica-com-foto-de-floresta-U1dpnJ3bwKw.jpg",
+      "title": "desventuras em series",
+      "author": "aaaaaaa",
+      "Editora": "aaaaaaa",
+      "language": "aaaaaaaa",
+      "pages": 3333333,
+      "year": 3333333333,
+      "imageLink": "https://i.pinimg.com/736x/91/e2/50/91e2500a1e58774eb55f5cfa87064b0d.jpg",
       "tag": "quero ler",
-      "id": 2
+      "id": 5
     }
   ],
   "user": [
@@ -70,6 +70,13 @@
       "email": "a@teste.com",
       "password": "a",
       "id": 7
+    },
+    {
+      "name": "teste",
+      "user": "teste",
+      "email": "teste@teste.com",
+      "password": "teste",
+      "id": 8
     }
   ]
 }
