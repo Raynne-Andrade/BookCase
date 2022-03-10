@@ -22,11 +22,13 @@
     />
     <input
       v-model="pages"
+      inputmode="numeric"
       placeholder="Número de páginas"
       class="Form__register--input"
     />
     <input
       v-model="year"
+      inputmode="numeric"
       placeholder="Ano de publicação"
       class="Form__register--input"
     />
@@ -47,6 +49,7 @@
 import axios from "axios";
 
 export default {
+  props: [],
   data() {
     return {
       title: "",
@@ -76,9 +79,11 @@ export default {
         .then((res) => {
           console.log(res.data);
           this.$store.dispatch("add", res.data);
-          console.log(this.$store.state.books)
+          console.log(this.$store.state.books);
+          this.$emit("sucess", true);
         })
         .catch((err) => console.log(err));
+      event.target.reset();
     },
   },
 };

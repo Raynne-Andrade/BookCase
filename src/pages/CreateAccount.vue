@@ -6,9 +6,11 @@
         <form @submit.prevent="CreateAccount">
           <input placeholder="Nome" v-model="name" required />
           <input placeholder="Apelido" v-model="nickname" required />
-          <input placeholder="E-mail" v-model="email" required />
-          <input placeholder="Senha" v-model="password" required />
-          <button type="submit">Cadastrar</button>
+          <input placeholder="E-mail" v-model="email" type="email" required />
+          <input placeholder="Senha" v-model="password" required type="password" />
+          <input placeholder="Confirmar senha" v-model="ConfirmPassword" required  type="password" @keyup="confirmPassword" />
+          <p v-if="!this.isMatch"> As senhas nao coincidem </p>
+          <button type="submit" :disabled="!this.isMatch"> Cadastrar</button>
         </form>
         <span v-if="error">
           Não foi possivel efetuar o cadastro, tente novamente mais tarde!
@@ -31,9 +33,19 @@ export default {
       email: "",
       password: "",
       error: false,
+      ConfirmPassword:"",
+      isMatch: true
     };
   },
   methods: {
+   confirmPassword(){ 
+     if(this.ConfirmPassword != this.password){
+      this.isMatch = false
+     }
+     else{ 
+       this.isMatch = true
+     }
+   },
     CreateAccount() {
       var body = {
         name: this.name,
